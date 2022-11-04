@@ -1,6 +1,6 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
-DROP TABLE IF EXISTS Champions;
+DROP TABLE IF EXISTS champions;
 
 CREATE TABLE champions (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
@@ -17,3 +17,21 @@ VALUES
 ('Loic Bruni', 'Mont-Sainte-Anne', 2019),
 ('Loic Bruni', 'Lenzerheide', 2018),
 ('Loic Bruni', 'Cairns', 2017);
+
+DROP TABLE IF EXISTS wchampions;
+
+CREATE TABLE wchampions (
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR NOT NULL,
+  venue VARCHAR NOT NULL,
+  year INT NOT NULL
+);
+
+INSERT INTO wchampions (name, venue,  year)
+VALUES 
+('Valentina Holl', 'Les Gets', 2022),
+('Myriam Nicole', 'Val di Sole', 2021),
+('Camille Balanche', 'Leogang', 2020),
+('Myriam Nichole', 'Mont-Sainte-Anne', 2019),
+('Rachel Atherton', 'Lenzerheide', 2018),
+('Miranda Miller', 'Cairns', 2017);

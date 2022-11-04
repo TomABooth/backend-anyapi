@@ -3,6 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 const { champs } = require('../data/champs-data.js');
+const { wchamps } = require('../data/wchamps-data.js');
 
 describe('champs route', () => {
   beforeEach(() => {
@@ -28,5 +29,21 @@ describe('champs route', () => {
       year: 2022,
     };
     expect(res.body).toEqual(loic);
+  });
+});
+
+describe('wchamps route', () => {
+  beforeEach(() => {
+    return setup(pool);
+  });
+  it('/wchamps should return a list of womens champs', async () => {
+    const res = await request(app).get('/wchamps');
+    const expected = wchamps.map((wchamp) => {
+      return { id: wchamp.id, name: wchamp.name };
+    });
+    expect(res.body).toEqual(expected);
+  });
+  afterAll(() => {
+    pool.end();
   });
 });
