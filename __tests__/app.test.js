@@ -18,4 +18,15 @@ describe('champs route', () => {
   afterAll(() => {
     pool.end();
   });
+
+  it('/champs/:id should return champs detail', async () => {
+    const res = await request(app).get('/champs/1');
+    const loic = {
+      id: '1',
+      name: 'Loic Bruni',
+      venue: 'Les Gets',
+      year: 2022,
+    };
+    expect(res.body).toEqual(loic);
+  });
 });
