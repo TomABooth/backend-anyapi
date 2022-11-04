@@ -7,7 +7,7 @@ const wchamps = [
   },
   {
     id: '2',
-    name: 'Myriam Nicole',
+    name: 'Myriam Nichole',
     venue: 'Val di Sole',
     year: 2021,
   },
@@ -19,7 +19,7 @@ const wchamps = [
   },
   {
     id: '4',
-    name: 'Myrian Nicole',
+    name: 'Myriam Nichole',
     venue: 'Mont-Sainte-Anne',
     year: 2019,
   },

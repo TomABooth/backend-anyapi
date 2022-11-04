@@ -16,9 +16,6 @@ describe('champs route', () => {
     });
     expect(res.body).toEqual(expected);
   });
-  afterAll(() => {
-    pool.end();
-  });
 
   it('/champs/:id should return champs detail', async () => {
     const res = await request(app).get('/champs/1');

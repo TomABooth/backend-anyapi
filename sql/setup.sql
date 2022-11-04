@@ -30,7 +30,7 @@ CREATE TABLE wchampions (
 INSERT INTO wchampions (name, venue,  year)
 VALUES 
 ('Valentina Holl', 'Les Gets', 2022),
-('Myriam Nicole', 'Val di Sole', 2021),
+('Myriam Nichole', 'Val di Sole', 2021),
 ('Camille Balanche', 'Leogang', 2020),
 ('Myriam Nichole', 'Mont-Sainte-Anne', 2019),
 ('Rachel Atherton', 'Lenzerheide', 2018),
