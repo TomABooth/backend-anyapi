@@ -1,13 +1,13 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
-CREATE TABLE champs (
+CREATE TABLE champions (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR NOT NULL,
   venue VARCHAR NOT NULL,
   year INT NOT NULL
 );
 
-INSERT INTO champs (name, venue,  year)
+INSERT INTO champions (name, venue,  year)
 VALUES 
 ('Loic Bruni', 'Les Gets', 2022),
 ('Greg Minaar', 'Val di Sole', 2021),
