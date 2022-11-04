@@ -43,4 +43,15 @@ describe('wchamps route', () => {
   afterAll(() => {
     pool.end();
   });
+
+  it('/wchamps/:id should return wchamps detail', async () => {
+    const res = await request(app).get('/wchamps/1');
+    const val = {
+      id: '1',
+      name: 'Valentina Holl',
+      venue: 'Les Gets',
+      year: 2022,
+    };
+    expect(res.body).toEqual(val);
+  });
 });
